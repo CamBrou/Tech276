@@ -1,0 +1,68 @@
+function randomQuote() {
+
+// choose a random number from 1 to 3:
+
+var myNumber = Math.floor(Math.random() * 4);
+
+//create vars based on random number:
+
+switch (myNumber) {				
+	case 1:
+	var randomPhrase = 'The greatest glory in living lies not in never falling, but in rising every time we fall';
+	var authorName = 'Nelson Mandela';
+	var myImage = 'https://www.biography.com/.image/t_share/MTY2MzU2NjgxMDUwMDM5OTk5/_photo-by-per-anders-petterssongetty-images.jpg';
+	var myDescript='Do not only focus on your failures but on your ability to always try harder in order to succeed.';
+	var myRandNumDescript= 'The number selected @ random is: '+myNumber ;
+	break;
+
+	case 2:
+	var randomPhrase = 'If you look at what you have in life, you ll always have more. If you look at what you don t have in life, you ll never have enough.';
+	var authorName = 'Oprah Winfrey';
+	var myImage = 'https://photos.prnewswire.com/prnfull/20151018/278031';
+	var myDescript='Stop comparing yourself to others and start appreciating what you already have.';
+	var myRandNumDescript= 'The number selected @ random is: '+myNumber ;
+	break;
+
+	case 3:
+	var randomPhrase = 'The future belongs to those who believe in the beauty of their dreams.';
+	var authorName = 'Eleanor Roosevelt';
+	var myImage = 'https://cdn.britannica.com/78/19578-050-E720BE72/Eleanor-Roosevelt-1950.jpg';
+	var myDescript='You will guarantee your future only if you believe in yourself.';
+	var myRandNumDescript= 'The number selected @ random is: '+myNumber ;
+	break;
+
+	default:
+	var randomPhrase = 'In the end, its not the years in your life that count. Its the life in your years.';
+	var authorName = 'Abraham Lincoln';
+	var myImage = 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg';
+	var myDescript='It is not how long you lived that counts but what you achieved when alive.';
+	var myRandNumDescript= 'The number selected @ random is: '+myNumber ;
+}
+
+
+// show the random number chosen in the console (must have DevTools open):
+console.log('The number selected @ random is: '+myNumber);
+
+
+
+// take vars from above and populate HTML content with matching ID:
+var mainHeadline = document.getElementById('main_headline');
+mainHeadline.innerHTML = '"'+randomPhrase+'"';	
+
+var theAuthor = document.getElementById('subHeadline');
+theAuthor.innerHTML = authorName;	
+
+var theImage = document.getElementById('image-container');
+theImage.innerHTML = '<img src="'+myImage+'" class="main-image"/>';//alert(img_text);
+
+
+var myDescription = document.getElementById('myDescription');
+myDescription.innerHTML = '"' +myDescript+'"';
+
+var myRandNumDescription = document.getElementById('myRandNumDescription');
+myRandNumDescription.innerHTML = myRandNumDescript;
+}
+
+// call this function (run it):
+
+randomQuote();
